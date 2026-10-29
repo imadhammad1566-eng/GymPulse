@@ -1,0 +1,18 @@
+exercise,muscle,days_ago,sets,reps,target_reps,weight_kg,rpe,notes
+Bench Press,Chest,27,3,8,8,45,8,First logged session
+Back Squat,Legs,26,3,8,8,65,8,Controlled depth
+Lat Pulldown,Back,25,3,10,10,35,7.5,Full range
+Overhead Press,Shoulders,24,3,8,8,25,8,Steady tempo
+Bench Press,Chest,20,3,8,8,47.5,7.5,Good bar path
+Back Squat,Legs,19,4,8,8,67.5,8,Added a working set
+Lat Pulldown,Back,18,3,10,10,37.5,7.5,Strong session
+Dumbbell Curl,Arms,17,3,12,12,12.5,7,Total load as entered
+Bench Press,Chest,13,4,8,8,50,8,Consistent reps
+Back Squat,Legs,12,4,8,8,70,8.5,Challenging final set
+Lat Pulldown,Back,11,3,10,10,40,8,Repeat this load
+Overhead Press,Shoulders,10,3,8,8,27.5,7,More reps in reserve
+Bench Press,Chest,6,4,8,8,52.5,7.5,Ready for a small increase
+Back Squat,Legs,5,4,7,8,72.5,9,Missed target on final set
+Lat Pulldown,Back,4,3,10,10,42.5,8,Keep the load
+Dumbbell Curl,Arms,3,3,12,12,15,7,All sets completed
+Overhead Press,Shoulders,1,3,8,8,30,7,Recovery first

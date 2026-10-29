@@ -1,0 +1,14 @@
+{
+  "run_id": "REPLACE-WITH-A-NEW-UUID",
+  "source_id": "dpg-REPLACE",
+  "service_id": "srv-REPLACE",
+  "owner_id": "tea-REPLACE",
+  "backend_url": "https://REPLACE.onrender.com",
+  "maintenance_at": "2026-11-10T12:00:00+00:00",
+  "plan": "free",
+  "region": "frankfurt",
+  "postgres_version": "16",
+  "controller_cidr": "203.0.113.10/32",
+  "delete_source_authorized": false,
+  "permissions_and_quotas_confirmed": false
+}

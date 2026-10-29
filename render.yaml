@@ -1,0 +1,23 @@
+# Create the initial database separately, then supply its INTERNAL URL directly.
+# Do not bind DATABASE_URL with fromDatabase: it must be replaceable via API.
+services:
+  - type: web
+    name: gympulse-api
+    runtime: python
+    plan: free
+    region: frankfurt
+    autoDeploy: false
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.10
+      - key: DATABASE_URL
+        sync: false
+      - key: APP_WRITE_TOKEN
+        sync: false
+      - key: MAINTENANCE_TOKEN
+        sync: false
+      - key: MAINTENANCE_MODE
+        value: 'false'
