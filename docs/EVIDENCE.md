@@ -2,7 +2,7 @@
 
 **Do not submit with mandatory fields pending.** This file records actual external results only. Local tests and simulations are not substitutes for GitHub Actions or the real cloud replacement trial. Link this file from README rather than duplicating reports.
 
-## Deployment — pending
+## Deployment — verified 2026-11-01
 
 | Item | Actual result |
 |---|---|
@@ -13,7 +13,7 @@
 | Workout entered via deployed UI and retrieved from API | Verified 2026-11-01: API returned two Bench Press entries, IDs 1 and 2; each 3 sets, 8 reps, 40 kg, RPE 7 |
 | Same record verified after backend redeploy | Verified 2026-11-01: deploy dep-dbjjm8ijnfac73871ep0 became live; both workout records (IDs 1 and 2) matched the complete pre-redeploy contents |
 
-## Required failed CI then fixed CI — pending
+## Required failed CI then fixed CI — verified 2026-11-01
 
 Use a branch that is not connected to Render deployment. Keep automatic deploy disabled for this exercise. Existing tests already detect the fault; do not add a fake failing test or skip a real assertion.
 
