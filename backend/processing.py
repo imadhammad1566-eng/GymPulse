@@ -20,7 +20,7 @@ def recommend(workout: WorkoutOut, as_of: date) -> Recommendation:
     if days < 0:
         raise ValueError("Reference date must not precede the workout")
     weight = workout.weight_kg
-    if days <= 2:
+    if days < 2:
         action, reason = "recover", "Wait at least two calendar days before repeating this lift."
     elif days >= 14:
         action, reason = "restart", "After a 14-day break, restart at roughly 90% of the last load."
