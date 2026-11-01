@@ -6,12 +6,12 @@
 
 | Item | Actual result |
 |---|---|
-| GitHub repository | Pending |
-| Streamlit Community Cloud URL | Pending |
-| Render API URL /docs | Pending |
-| DB source ID, plan, region, PostgreSQL version | Pending |
-| Workout entered via deployed UI and retrieved from API | Pending |
-| Same record verified after backend redeploy | Pending |
+| GitHub repository | https://github.com/imadhammad1566-eng/GymPulse — source published |
+| Streamlit Community Cloud URL | https://gympulse-3thrmayy9enkkchobq4qqm.streamlit.app/ ? opened by owner |
+| Render API URL /docs | https://gympulse-api-o9jt.onrender.com/docs — Render deployment confirmed live; public API returned saved workouts on 2026-11-01 |
+| DB source ID, plan, region, PostgreSQL version | dpg-dbh8t0g473hc7398uhu0-a; free; frankfurt; PostgreSQL 16; created 2026-10-29 |
+| Workout entered via deployed UI and retrieved from API | Verified 2026-11-01: API returned two Bench Press entries, IDs 1 and 2; each 3 sets, 8 reps, 40 kg, RPE 7 |
+| Same record verified after backend redeploy | Verified 2026-11-01: deploy dep-dbjjm8ijnfac73871ep0 became live; both workout records (IDs 1 and 2) matched the complete pre-redeploy contents |
 
 ## Required failed CI then fixed CI — pending
 
@@ -26,12 +26,12 @@ Use a branch that is not connected to Render deployment. Keep automatic deploy d
 
 | Evidence | Actual link / result |
 |---|---|
-| Failed Actions run | Pending |
-| Successful Actions run after fix | Pending |
-| Fault commit | Pending |
-| Fix commit | Pending |
+| Failed Actions run | https://github.com/imadhammad1566-eng/GymPulse/actions/runs/41310063016 ? 6 failed, 37 passed |
+| Successful Actions run after fix | https://github.com/imadhammad1566-eng/GymPulse/actions/runs/41310197558 ? 43 passed; PostgreSQL integration test ran |
+| Fault commit | https://github.com/imadhammad1566-eng/GymPulse/commit/f189061cda75fa03aff41c2c945e17a666862f92 |
+| Fix commit | https://github.com/imadhammad1566-eng/GymPulse/commit/31f19f3fab930037ba56c360e9561544c2e7b212 |
 
-Expected explanation, confirm against actual logs: **symptom** — two-day workouts incorrectly return recovery; **cause** — inclusive comparison puts the boundary in the wrong branch; **fix** — restore `< 2`; **verification** — existing parameterized cases and the entire shared suite pass. If the observed result differs, document what actually happened.
+Observed in the actual GitHub logs: **symptom** — two-day workouts incorrectly return recovery; **cause** — inclusive comparison puts the boundary in the wrong branch; **fix** — restore `< 2`; **verification** — existing parameterized cases and the entire shared suite pass. The faulty run failed two API integration cases and four two-day boundary cases. Tests were unchanged. The corrected branch matches main. Draft PR: https://github.com/imadhammad1566-eng/GymPulse/pull/1 .
 
 ## Required actual cloud replacement — pending
 
