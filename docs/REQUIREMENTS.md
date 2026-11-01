@@ -1,6 +1,6 @@
 # Assignment coverage
 
-This is an implementation checklist, **not a claim that the mandatory cloud evidence is finished**. The README is the central documentation.
+This checklist maps the implementation to the assignment. Actual deployment, failed/fixed CI and authorized cloud replacement results are recorded in `EVIDENCE.md`. The README is the central documentation.
 
 | Brief | Implementation / evidence |
 |---|---|
@@ -15,10 +15,10 @@ This is an implementation checklist, **not a claim that the mandatory cloud evid
 | Logging and network timeouts | Named Python loggers; bounded HTTP operations and readiness polls |
 | Shared pytest suite | `tests/`; parameterized rule and decision tests, API integration, restoration and resume tests |
 | GitHub Actions | `.github/workflows/tests.yml`; SQLite temporary DBs plus isolated PostgreSQL service |
-| Failed CI → fixed CI evidence | **Pending real GitHub runs.** Follow `docs/EVIDENCE.md`; do not invent links |
+| Failed CI → fixed CI evidence | **Verified 2026-11-01:** 6 failed/37 passed, then 43 passed. Actual runs in `docs/EVIDENCE.md` |
 | Virtual environment, pins and complete startup | `requirements.txt`, `start.py`, `start.ps1`, `project.py`, `.env.example` |
 | Secrets excluded | `.gitignore`; env configuration; authenticated maintenance; optional app write token |
-| Streamlit Community Cloud + Render | Configuration and instructions ready; **actual account deployment pending** |
+| Streamlit Community Cloud + Render | **Published:** GitHub, Streamlit and Render links in `docs/EVIDENCE.md` |
 | Persistent cloud database | External PostgreSQL via `DATABASE_URL`; no cloud SQLite fallback in deployment configuration |
 | Independent scheduled async controller | `python -m maintenance.controller`; actual awaited Render requests |
 | Authorization, resource scope and permissions | Exact IDs/config match; single supported free plan; explicit deletion and quota attestations |
@@ -29,8 +29,8 @@ This is an implementation checklist, **not a claim that the mandatory cloud evid
 | Create, restore, API switch, deploy, read and test write | `MaintenanceController.replace`, Render API adapter, protected committed write probe |
 | Durable journal, process lock, bounded retries | Atomic fsynced JSON; `FileLock`; 3 read attempts, bounded polls; uncertain POST never repeated |
 | Resume uncertain creation | Run-specific resource name and saved intent; reconcile exactly one match or stop |
-| Actual complete cloud replacement trial | **Pending a real, separately authorized run**; logs from a simulation cannot substitute |
+| Actual complete cloud replacement trial | **Verified 2026-11-01:** actual authorized replacement; redacted journal and log in `CLOUD_REPLACEMENT.md` |
 | README, datasets, decisions and AI disclosure | README, CSV dataset, presentation guide and evidence instructions |
 | Optional extensions | None claimed. Plotly/CSV are ordinary features; no unverified bonus claims |
 
-Cloud deployment, the real replacement trial, and real CI evidence remain submission requirements even when all local tests pass.
+Cloud deployment, real CI failure/fix and the actual replacement trial were verified on 2026-11-01. See the evidence register for the actual results.

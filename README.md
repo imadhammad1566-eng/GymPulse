@@ -6,7 +6,7 @@ Python 3.12 · FastAPI · Streamlit · SQLAlchemy · PostgreSQL / local SQLite
 
 Built for the 2026/2027 Multi-Paradigm Programming Languages practical assignment. This repository includes the application, independent maintenance controller, one shared test suite, CI workflow, sample data and deployment instructions.
 
-> Submission status: local implementation is provided. Real GitHub CI runs, deployment URLs and the real cloud database replacement trial must be completed with the student's accounts. Empty evidence fields below are deliberate, not successful results. See [the requirements checklist](docs/REQUIREMENTS.md).
+> Submission status: the three public links, real failed/fixed GitHub Actions runs, post-redeploy persistence and actual authorized cloud database replacement were verified on 2026-11-01. See [the evidence register](docs/EVIDENCE.md) and [actual replacement report](docs/CLOUD_REPLACEMENT.md).
 
 ## What you can do
 
@@ -185,7 +185,7 @@ The mandatory failed-then-fixed **GitHub Actions** example is separate from pass
 
 Render free web services can sleep, and their filesystems are ephemeral; the cloud database must be external PostgreSQL. Free Render Postgres permits one active instance per workspace and expires after 30 days. The replacement controller below handles the single-instance path with a local trial restore first. Free quotas and account permissions must be checked before each real trial; no automatic paid upgrade is implemented. Keep the apps accessible through the presentation and allow startup time. [Render's free-service limits](https://render.com/docs/free), [Streamlit deployment guide](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app).
 
-Cloud application links are **pending account deployment**; fill in `docs/EVIDENCE.md`. This source project alone does not satisfy the mandatory deployment or actual replacement-trial evidence.
+Published applications: [Streamlit dashboard](https://gympulse-3thrmayy9enkkchobq4qqm.streamlit.app/) and [Render API documentation](https://gympulse-api-o9jt.onrender.com/docs). Actual CI and cloud replacement results are recorded in [EVIDENCE.md](docs/EVIDENCE.md).
 
 ## Database maintenance
 
